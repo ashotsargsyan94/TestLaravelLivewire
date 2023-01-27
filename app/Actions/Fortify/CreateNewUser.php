@@ -14,9 +14,8 @@ class CreateNewUser implements CreatesNewUsers
 {
     use PasswordValidationRules;
 
-    public function create(array $input): User|Admin
+    public function creaaate(array $input): User|Admin
     {
-        grmz;
         if(config('fortify.guard') === 'admin'){
             Validator::make($input, [
                 'name' => ['required', 'string', 'max:255'],
